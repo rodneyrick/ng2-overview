@@ -10,13 +10,15 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 import { ContactModule } from './contact/contact.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   imports: [ 
     BrowserModule, 
     FormsModule,
     appRouting,
-    ContactModule
+    ContactModule,
+    UserModule
   ],
   declarations: [ 
     AppComponent,

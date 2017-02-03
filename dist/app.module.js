@@ -18,6 +18,7 @@ var home_component_1 = require('./home/home.component');
 var about_component_1 = require('./about/about.component');
 var not_found_component_1 = require('./not-found/not-found.component');
 var contact_module_1 = require('./contact/contact.module');
+var user_module_1 = require('./user/user.module');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,7 +28,8 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 app_routing_1.appRouting,
-                contact_module_1.ContactModule
+                contact_module_1.ContactModule,
+                user_module_1.UserModule
             ],
             declarations: [
                 app_component_1.AppComponent,

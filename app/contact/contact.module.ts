@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ContactComponent } from './contact.component';
-import { UserService } from './user.service';
+import { ContactService } from './contact.service';
 
 @NgModule({
   imports: [ CommonModule ],
   declarations: [ ContactComponent ],
   // exports: [ ],
-  providers: [ UserService ]
+  providers: [ ContactService ]
 })
 export class ContactModule { }

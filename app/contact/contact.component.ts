@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { UserService } from './user.service';
+import { ContactService } from './contact.service';
 
 @Component({
   selector: 'contact-page',
   styles: [`
-    .user {
+    .contact {
       float: left; 
       -webkit-box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.75);
       -moz-box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.75);
@@ -20,22 +20,22 @@ import { UserService } from './user.service';
     i am contact page
     </div>
     <br>
-    <div class="user" *ngFor="let u of users">
+    <div class="contact" *ngFor="let u of users">
       <h4>{{u.login}}</h4>
       <br>
       <img src="{{u.avatar_url}}"/>
     </div>
   `,
-  providers: [UserService]
+  providers: [ContactService]
 })
 export class ContactComponent {
 
-  service: UserService;
+  service: ContactService;
   users: Array<any> = [];
 
   constructor(){
 
-    this.service = new UserService();
+    this.service = new ContactService();
 
     this.service.getUsers()
       .then(users => {
