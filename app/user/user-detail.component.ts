@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 
 import { UserService } from './user.service';
 import { User } from './user.model';
@@ -14,9 +13,11 @@ import { User } from './user.model';
     }
   `],
   template: `
+    <a (click)="goBack()" class="btn btn-sm btn-info">Go Back</a>
     <div *ngIf="user" class="jumbotron text-center">
-      <h1>{{ user.name }} - {{ user.username }}</h1>
+      <h3>{{ user.name }} - {{ user.username }}</h3>
       <img [src]="user.avatar_url" class="img-responsive img-circle">
+      <h2>{{user.phrase}}</h2>
     </div>
   `,
   providers: [UserService]
@@ -27,12 +28,19 @@ export class UserDetailComponent implements OnInit{
   user: User;
   users: User[];
 
-  constructor(private route: ActivatedRoute){}
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router
+  ){}
 
   ngOnInit() {
     this.service = new UserService();
     let username = this.route.snapshot.params['username'];
     this.service.getUser(username).then( u => this.user = u);
+  }
+
+  goBack() {
+    this.router.navigate(['/user']);
   }
 
 }

@@ -14,12 +14,14 @@ export class UserService {
       {
         "name": "RodNelson",
         "username": "rodneyrick",
-        "avatar_url": "https://avatars.githubusercontent.com/rodneyrick"
+        "avatar_url": "https://avatars.githubusercontent.com/rodneyrick",
+        "phrase": "Mais um Wiki!"
       },
       {
         "name": "Salim",
         "username": "danilovex",
-        "avatar_url": "https://avatars.githubusercontent.com/danilovex"
+        "avatar_url": "https://avatars.githubusercontent.com/danilovex",
+        "phrase": "Hoje é Dia de MALDADE!"
       }
       // {
       //   "username": "danilovex",

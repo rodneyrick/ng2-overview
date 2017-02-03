@@ -5,11 +5,13 @@ import { UserComponent } from './user.component';
 import { UserDetailComponent } from './user-detail.component';
 import { UserService } from './user.service';
 
+import { UserSectionComponent } from './user-section.component';
+
 import { userRouting } from './user.routing';
 
 @NgModule({
   imports: [ CommonModule, userRouting ],
-  declarations: [ UserComponent, UserDetailComponent ],
+  declarations: [ UserComponent, UserDetailComponent, UserSectionComponent ],
   // exports: [ ],
   providers: [ UserService ]
 })
