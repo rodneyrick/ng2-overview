@@ -18,6 +18,7 @@ import { User } from './user.model';
     }
   `],
   template: `
+    <h1>{{title}}</h1>
     <div class="row" *ngIf="users">
 
       <div class="col-sm-4" *ngFor="let user of users">
@@ -36,10 +37,12 @@ import { User } from './user.model';
 export class UserComponent {
 
   service: UserService;
-  users: Array<User> = [];
+  users: Array<User>;
+  title: string;
 
   constructor(){
     this.service = new UserService();
+    this.title = 'Test Titl';
     this.service.getUsers().then(users => this.users = users );
   }
 

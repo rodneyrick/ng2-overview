@@ -13,7 +13,7 @@ export class UserService {
     this.users = [
       {
         "name": "RodNelson",
-        "username": "rodneyrick",
+        "username": "rodneyrick@gmail.com",
         "avatar_url": "https://avatars.githubusercontent.com/rodneyrick",
         "phrase": "Mais um Wiki!"
       },

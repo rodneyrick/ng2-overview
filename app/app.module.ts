@@ -11,6 +11,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { ContactModule } from './contact/contact.module';
 import { UserModule } from './user/user.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   imports: [ 
@@ -18,7 +19,8 @@ import { UserModule } from './user/user.module';
     FormsModule,
     appRouting,
     ContactModule,
-    UserModule
+    UserModule,
+    LoginModule
   ],
   declarations: [ 
     AppComponent,
