@@ -1,0 +1,19 @@
+{
+    "success": true,
+    "data": [
+        {
+            "name": "RodNelson",
+            "username": "rodneyrick",
+            "email": "rodneyrick@gmail.com",
+            "avatar_url": "https://avatars.githubusercontent.com/rodneyrick",
+            "phrase": "Mais um Wiki!"
+        },
+        {
+            "name": "Salim",
+            "username": "danilovex",
+            "email": "danilovex@gmail.com",
+            "avatar_url": "https://avatars.githubusercontent.com/danilovex",
+            "phrase": "Hoje é Dia de MALDADE!"
+        }
+    ]
+}

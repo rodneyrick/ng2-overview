@@ -5,7 +5,7 @@ import { LoginSectionComponent } from './login-section.component';
 import { LoginComponent } from './login.component';
 
 const loginRoutes: Routes = [
-  { 
+  {
     path: 'login',
     component: LoginSectionComponent,
     children: [

@@ -36,14 +36,17 @@ import { User } from './user.model';
 })
 export class UserComponent {
 
-  service: UserService;
   users: Array<User>;
   title: string;
+  errorMessage: string;
 
-  constructor(){
-    this.service = new UserService();
+  constructor(private userService: UserService) {
     this.title = 'Test Titl';
-    this.service.getUsers().then(users => this.users = users );
+    this.userService.getUsers()
+      .subscribe(
+        users => this.users = users,
+        error =>  this.errorMessage = <any>error
+      );
   }
 
 }

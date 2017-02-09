@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'
 
-import { UserService } from './user.service';
+import { UserServicePromise } from './user-promise.service';
 import { User } from './user.model';
 
 @Component({
@@ -20,21 +20,21 @@ import { User } from './user.model';
       <h2>{{user.phrase}}</h2>
     </div>
   `,
-  providers: [UserService]
+  providers: [UserServicePromise]
 })
 export class UserDetailComponent implements OnInit{
 
-  service: UserService;
+  service: UserServicePromise;
   user: User;
   users: User[];
 
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private router: Router
-  ){}
+  ) {}
 
   ngOnInit() {
-    this.service = new UserService();
+    this.service = new UserServicePromise();
     let username = this.route.snapshot.params['username'];
     this.service.getUser(username).then( u => this.user = u);
   }
@@ -42,5 +42,4 @@ export class UserDetailComponent implements OnInit{
   goBack() {
     this.router.navigate(['/user']);
   }
-
 }

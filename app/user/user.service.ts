@@ -1,43 +1,31 @@
-
-
 import { Injectable } from '@angular/core';
+import { Http, Response }  from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 import { User } from './user.model';
+import { FromHttp } from '../util/fromHttp';
 
 @Injectable()
 export class UserService {
 
-  users: Array<User>;
+  private url: string = 'app/user/users.json';
 
-  constructor() {
-    this.users = [
-      {
-        "name": "RodNelson",
-        "username": "rodneyrick@gmail.com",
-        "avatar_url": "https://avatars.githubusercontent.com/rodneyrick",
-        "phrase": "Mais um Wiki!"
-      },
-      {
-        "name": "Salim",
-        "username": "danilovex",
-        "avatar_url": "https://avatars.githubusercontent.com/danilovex",
-        "phrase": "Hoje é Dia de MALDADE!"
-      }
-      // {
-      //   "username": "danilovex",
-      //   "avatar_url": "https://avatars.githubusercontent.com/danilovex"
-      // },
-    ];
+  constructor(private http: Http) {}
+
+  getUsers(): Observable<User[]> {
+    return this.http
+      .get(this.url)
+      .map(FromHttp.extractData)
+      .catch(FromHttp.handleError);
   }
 
-  getUsers() : Promise<Array<User>> {
-    return Promise.resolve(this.users);
-  }
-
-  getUser(username: string): Promise<User> {
-    return Promise.resolve(
-        this.users.find( user => user.username === username )
-    );
+  getUser(email: string): Observable<User> {
+    return this.http
+      .get(this.url)
+      .map((res: Response) => res.json().data.find( u => u.email === email))
+      .catch(FromHttp.handleError);
   }
 
 }

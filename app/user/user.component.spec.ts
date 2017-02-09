@@ -18,18 +18,20 @@ describe('UserComponent', () => {
   beforeEach(() => {
 
     users = [
-      {
-        'name': 'RodNelson',
-        'username': 'rodneyrick@gmail.com',
-        'avatar_url': 'https://avatars.githubusercontent.com/rodneyrick',
-        'phrase': 'Mais um Wiki!'
-      },
-      {
-        'name': 'Salim',
-        'username': 'danilovex',
-        'avatar_url': 'https://avatars.githubusercontent.com/danilovex',
-        'phrase': 'Hoje é Dia de MALDADE!'
-      }
+        {
+            'name': 'RodNelson',
+            'username': 'rodneyrick',
+            'email': 'rodneyrick@gmail.com',
+            'avatar_url': 'https://avatars.githubusercontent.com/rodneyrick',
+            'phrase': 'Mais um Wiki!'
+        },
+        {
+            'name': 'Salim',
+            'username': 'danilovex',
+            'email': 'danilovex@gmail.com',
+            'avatar_url': 'https://avatars.githubusercontent.com/danilovex',
+            'phrase': 'Hoje é Dia de MALDADE!'
+        }
     ];
 
     TestBed.configureTestingModule({
