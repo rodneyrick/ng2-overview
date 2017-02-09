@@ -7,7 +7,7 @@ import { UserService } from './user.service';
 import { User } from './user.model';
 
 describe('UserComponent', () => {
-  
+
   let comp:    UserComponent;
   let fixture: ComponentFixture<UserComponent>;
   let de:      DebugElement;
@@ -19,16 +19,16 @@ describe('UserComponent', () => {
 
     users = [
       {
-        "name": "RodNelson",
-        "username": "rodneyrick@gmail.com",
-        "avatar_url": "https://avatars.githubusercontent.com/rodneyrick",
-        "phrase": "Mais um Wiki!"
+        'name': 'RodNelson',
+        'username': 'rodneyrick@gmail.com',
+        'avatar_url': 'https://avatars.githubusercontent.com/rodneyrick',
+        'phrase': 'Mais um Wiki!'
       },
       {
-        "name": "Salim",
-        "username": "danilovex",
-        "avatar_url": "https://avatars.githubusercontent.com/danilovex",
-        "phrase": "Hoje é Dia de MALDADE!"
+        'name': 'Salim',
+        'username': 'danilovex',
+        'avatar_url': 'https://avatars.githubusercontent.com/danilovex',
+        'phrase': 'Hoje é Dia de MALDADE!'
       }
     ];
 
@@ -54,9 +54,7 @@ describe('UserComponent', () => {
   });
 
   it('should display a different test title', () => {
-    
-    
-    
+
   });
 
 });

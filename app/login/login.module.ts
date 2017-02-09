@@ -9,10 +9,10 @@ import { LoginSectionComponent } from './login-section.component';
 import { loginRouting } from './login.routing';
 
 @NgModule({
-  imports: [ 
-    CommonModule, 
+  imports: [
+    CommonModule,
     ReactiveFormsModule,
-    HttpModule ,
+    HttpModule,
     loginRouting
   ],
   declarations: [ LoginSectionComponent, LoginComponent ],
